@@ -152,19 +152,56 @@
 
         <div id="main">
             <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Hello World</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>ssh连接centos及htttpd源码安装</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="ssh连接："><a href="#ssh连接：" class="headerlink" title="ssh连接："></a>ssh连接：</h1><p>Windows系统想要通过ssh连接到centos 7系统中需要借助一些软件，这里我们通过Termius软件来实现ssh连接。软件在官网下载安装即可。centos在虚拟机中安装，我们先ping一下百度的域名，确认虚机可以连接互联网。</p>
+<p><img src="/images/httpd/1.png" alt="确认网络"></p>
+<p>可以ping通百度我们在看一下IP地址，在centos7中查看相关信息的命令是ip addr</p>
+<p><img src="/images/httpd/2.png" alt="查看IP地址"></p>
+<p>我们看到IP地址是192.168.11.146，打开Termius选择”NEW HOST”</p>
+<p> <img src="/images/httpd/3.png" alt="连接"></p>
+<p>Label处随自己心意写，这里写的是centos，Address处写的是虚机的IP地址Username就是虚机的账号我们写root，Password就写root的密码，port是服务的端口号，这里默认即可，填写完成后点击右上方的save保存。</p>
+<p><img src="/images/httpd/4.png" alt="填写配置"></p>
+<p>然后我们双击HOST下方的centos</p>
+<p><img src="/images/httpd/5.png" alt="选择主机"></p>
+<p>即可进入到centos7的系统中</p>
+<p><img src="/images/httpd/6.png" alt="进入系统"></p>
+<h1 id="httpd源码安装"><a href="#httpd源码安装" class="headerlink" title="httpd源码安装"></a>httpd源码安装</h1><p>所用到的工具有：centos7、httpd的包、FileZilla、pcre-8.10（上述文件在网上都可以搜集到资源），系统提前安装好了gcc环境<br>首先在Windows中安装FileZilla并打开主机我们输入centos7的IP地址：192.168.11.146用户名我们用root密码输入root账户的密码，端口填写22然后点击快速连接。</p>
+<p><img src="/images/httpd/7.png" alt="连接"></p>
+<p>我们可以看到连接成功了。</p>
+<p><img src="/images/httpd/8.png" alt="连接成功"></p>
+<p>然后我们把在网上下载好的httpd的包通过FileZilla上传到centos7中，在左下方找到文件的位置拖拽到右下方想要安放的路径中。</p>
+<p><img src="/images/httpd/9.png" alt="上传文件"></p>
+<p>然后我们在centos中查看一下，在root下我们看到了刚刚上传的包，我们把包解压出来。</p>
+<p><img src="/images/httpd/10.png" alt="解压包"></p>
+<p>我们cd进入到解压出来的文件夹中运行”./configure”命令，</p>
+<p><img src="/images/httpd/11.png" alt="运行安装命令"></p>
+<p>系统反馈报错提示没有APR，</p>
+<p><img src="/images/httpd/12.png" alt="提示错误"></p>
+<p>我们通过yum search apr命令来查看一下需要安装哪些依赖，通过反馈信息我们可以得知我们需要安装apr、apr-devel、apr-until-devel、apr-until这四个依赖。</p>
+<p><img src="/images/httpd/13.png" alt="分析错误"></p>
+<p>我们通过yum install 依赖包名（ps：依赖包后面的操作位数如‘.i686’不需要写到命令中，系统会自动判定）由于centos7中没有安装图形化界面且本人英语不是很好所以转到termius上。我们将上述提到的依赖包都安装了一下，</p>
+<p><img src="/images/httpd/14.png" alt="安装依赖"></p>
+<p>我们再通过FileZilla上传到centos7中pcre-8.10到root下，</p>
+<p><img src="/images/httpd/15.png" alt="上传文件"></p>
+<p>通过unzip命令把包解压，</p>
+<p><img src="/images/httpd/16.png" alt="解压"></p>
+<p>然后我们进入到解压出来的文件夹中输入”./configure”命令。</p>
+<p><img src="/images/httpd/17.png" alt="运行命令"></p>
+<p>安装完后我们再回到httpd-2.4.37文件夹中运行”./configure –prefix=/usr/local/apache2”</p>
+<p><img src="/images/httpd/18.png" alt="运行命令"></p>
+<p>安装成功。</p>
+<p><img src="/images/httpd/19.png" alt="安装成功"></p>
+<p>我们接下来运行”make”</p>
+<p><img src="/images/httpd/20.png" alt="运行make"></p>
+<p>然后运行”make install”。</p>
+<p><img src="/images/httpd/21.png" alt="运行make install"></p>
+<p>安装成功后我们来开启服务并关闭防火墙分别输入”/usr/local/apache2/bin/apachectl start”、”systemctl stop firewalld”、”service iptables stop”。</p>
+<p><img src="/images/httpd/22.png" alt="关闭防火墙，开启服务"></p>
+<p>然后我们登录192.168.11.146看一下，可以访问网站。</p>
+<p><img src="/images/httpd/23.png" alt="成功访问"></p>
 
             </div>
 
@@ -227,8 +264,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/12/03/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/12/03/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/12/04/ssh连接centos及htttpd源码安装/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/12/04/ssh连接centos及htttpd源码安装/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
