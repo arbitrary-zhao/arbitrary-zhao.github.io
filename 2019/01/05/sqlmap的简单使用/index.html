@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    godz
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">GODz</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">いえ</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">ぶら</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="略歴">
+		                略歴
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="チーム">
+		                チーム
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="ツボ">
+		                ツボ
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="と呼ぶ">
+		                と呼ぶ
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>sqlmap的简单使用</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="安装sqlmap"><a href="#安装sqlmap" class="headerlink" title="安装sqlmap"></a>安装sqlmap</h1><p> sqlmap是基于Python环境的，所以现在电脑上安装Python，在py官网下载就好注意要下载2.7.15版的。（py官网是Python.org）</p>
+<p><img src="/images/sqlmap/1.png" alt=""></p>
+<p>然后双击下载的python-2.7.15.amd64.msi文件进行安装</p>
+<p><img src="/images/sqlmap/2.png" alt=""></p>
+<p>然后根据目录提示下一步，下一步安装就好，要记住py的安装路径，安装过后在环境变量配置。进入py的安装目录中，在地址栏上复制当前路径，然后右键我的电脑–&gt;属性–&gt;高级系统设置</p>
+<p><img src="/images/sqlmap/3.png" alt=""></p>
+<p>然后选择环境变量</p>
+<p><img src="/images/sqlmap/4.png" alt=""></p>
+<p>在系统变量中选择Path，双击进行编辑，在内容最后添加英文状态的分号，然后把py的路径复制到后面然后确定–&gt;确定。</p>
+<p><img src="/images/sqlmap/5.png" alt=""></p>
+<p><img src="/images/sqlmap/6.png" alt=""></p>
+<p>配置好环境变量后测试一下是否能运行py。win+r输入cmd，然后再命令提示符中输入python -V。如果能出现py版本则配置正确，如果不能请到网上自行百度Python环境变量的配置。</p>
+<p><img src="/images/sqlmap/7.png" alt=""></p>
+<p><img src="/images/sqlmap/8.png" alt=""></p>
+<p>py环境配置完了后我们开始安装sqlmap，到GitHub上搜索sqlmap</p>
+<p><img src="/images/sqlmap/9.png" alt=""></p>
+<p>然后下载</p>
+<p><img src="/images/sqlmap/10.png" alt=""></p>
+<p>下载后把文件解压出来。进入解压出来的文件中，在路径中输入cmd或者shift+右键选择在此处打开命令窗口</p>
+<p><img src="/images/sqlmap/11.png" alt=""></p>
+<p>输入python sqlmap.py</p>
+<p><img src="/images/sqlmap/12.png" alt=""></p>
+<p>如果大家觉得这样打开sqlmap很麻烦可以进行如下操作。<br>在环境变量配置页中找到PATHEXT选项，双击进行编辑。在最后出输入“.py”,然后找到path把sqlmap的路径复制进去，加到系统变量中。</p>
+<p><img src="/images/sqlmap/13.png" alt=""></p>
+<p><img src="/images/sqlmap/14.png" alt=""></p>
+<p><img src="/images/sqlmap/15.png" alt=""></p>
+<p>此方法是把.py的文件加到变量中，虽然有很多方便，同时别人干你的电脑也方便了很多，所以请慎重选择此方法。<br>下面赘述一下sqlmap的简单使用</p>
+<blockquote>
+<p>sqlmap –url “域名” //这条命令是使用sqlmap查看目标网站的，反馈的内容里能看到很多的东西。可以看到测试网站使用的方法，还有网站是否在使用waf。</p>
+</blockquote>
+<blockquote>
+<p>sqlmap -U “域名” –dbs //这条命令是使用sqlmap来跑目标网站的数据名字的</p>
+</blockquote>
+<blockquote>
+<p>sqlmap -U “域名” -D “数据库名” –tables // 用来跑指定数据库中的表</p>
+</blockquote>
+<blockquote>
+<p>sqlmap -U “域名” -D “数据库名” -T “表名” –columns // 用来跑指定表中的字段</p>
+</blockquote>
+<blockquote>
+<p>qlmap -U “域名” -D “数据库名” -T “表名” -C “字段（可多选逗号分隔）” –dump //跑字段中的内容</p>
+</blockquote>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/01/05/sqlmap的简单使用/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/01/05/sqlmap的简单使用/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
